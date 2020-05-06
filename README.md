@@ -1,2 +1,0 @@
-# ckavidas.github.io
-Blog
