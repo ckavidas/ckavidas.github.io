@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Threat Defense Workshop with Trend Micro and DC416 | Costa Kavidas | Your Friend In Infosec</title>
+        <meta name="Description" content="On Saturday April 25th 2020 I participated in a Threat Defense workshop run by Trend Micro and Defcon Toronto."><meta property="og:title" content="Threat Defense Workshop with Trend Micro and DC416" />
+<meta property="og:description" content="On Saturday April 25th 2020 I participated in a Threat Defense workshop run by Trend Micro and Defcon Toronto." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ckavidas.github.io/threat-def-dc416-4-2020/" />
+<meta property="article:published_time" content="2020-04-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-25T00:00:00+00:00" /><meta property="og:site_name" content="Costa Kavidas | Your Friend In Infosec" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Threat Defense Workshop with Trend Micro and DC416"/>
+<meta name="twitter:description" content="On Saturday April 25th 2020 I participated in a Threat Defense workshop run by Trend Micro and Defcon Toronto."/>
+<meta name="theme-color" content="#ffffff">
+<meta name="msapplication-TileColor" content="#da532c">
+<link rel="canonical" href="https://ckavidas.github.io/threat-def-dc416-4-2020/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="prev" href="https://ckavidas.github.io/issessions-presentation-3-2020/" /><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Threat Defense Workshop with Trend Micro and DC416",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/ckavidas.github.io\/threat-def-dc416-4-2020\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/ckavidas.github.io\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "Workshops, Threat Defense, DC416, Trend Micro","wordcount":  723 ,
+        "url": "https:\/\/ckavidas.github.io\/threat-def-dc416-4-2020\/","datePublished": "2020-04-25","dateModified": "2020-04-25","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                "@type": "Organization",
+                "name": "Costa Kavidas",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/ckavidas.github.io\/logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "Costa"
+            },"description": "On Saturday April 25th 2020 I participated in a Threat Defense workshop run by Trend Micro and Defcon Toronto."
+    }
+    </script></head>
+    <body><script>
+            if (!window.localStorage || !window.localStorage.getItem('theme')) {window.isDark = 'dark' === 'dark';} else {
+                window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            }
+            window.isDark && document.body.classList.add('dark-theme');
+        </script><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/">Costa Kavidas | Your Friend In Infosec</a>
+        </div>
+        <div class="menu"><a class="menu-item" href="/posts/" rel="noopener noreffer">Posts</a><a class="menu-item" href="/categories/" rel="noopener noreffer">Categories</a><a class="menu-item" href="/about/" rel="noopener noreffer">About</a><a class="menu-item" href="https://github.com/ckavidas" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><span class="menu-item">|</span>
+            <a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-wrapper">
+        <div class="header-container">
+            <div class="header-title">
+                <a href="/">Costa Kavidas | Your Friend In Infosec</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="" rel="noopener noreffer">Posts</a><a class="menu-item" href="/categories/" title="" rel="noopener noreffer">Categories</a><a class="menu-item" href="/about/" title="" rel="noopener noreffer">About</a><a class="menu-item" href="https://github.com/ckavidas" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+
+<script>
+    window.desktopHeaderMode = "fixed";
+    window.mobileHeaderMode = "auto";
+</script>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">Threat Defense Workshop with Trend Micro and DC416</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://ckavidas.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Costa</a>
+</span>&nbsp;
+                    <span class="post-category">included in<a href="/categories/workshops">
+                                <i class="far fa-folder fa-fw"></i>Workshops
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-04-25>2020-04-25</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 723 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>4 min&nbsp;<span id="/threat-def-dc416-4-2020/" class="leancloud_visitors" data-flag-title="Threat Defense Workshop with Trend Micro and DC416">
+                        <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="toc" id="toc-auto">
+                <h2 class="toc-title">Contents</h2>
+                <div class="toc-content" id="toc-content-auto"></div>
+            </div>
+            <div class="toc" id="toc-static">
+                <details>
+                    <summary>
+                        <div class="toc-title">
+                            <span>Contents</span>
+                            <span><i class="details icon fas fa-angle-down"></i></span>
+                        </div>
+                    </summary>
+                    <div class="toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#review">Review</a></li>
+    <li><a href="#exploring-deep-security-after-the-workshop">Exploring Deep Security After the Workshop</a>
+      <ul>
+        <li><a href="#adding-a-computer-to-deep-security">Adding a computer to Deep Security</a></li>
+        <li><a href="#forwarding-deep-security-events-to-existing-infrastructure">Forwarding Deep Security Events to existing infrastructure.</a></li>
+        <li><a href="#building-policies-and-rules-for-your-computers">Building policies and rules for your computers.</a></li>
+      </ul>
+    </li>
+    <li><a href="#future-works--ideas-i-would-like-to-explore">Future works / ideas I would like to explore:</a></li>
+    <li><a href="#closing-remarks">Closing Remarks</a></li>
+  </ul>
+</nav></div>
+                </details>
+            </div><div class="content" id="content"><p><img
+        class="lazyload"
+        src="/svg/loading.small.min.svg"
+        data-sizes="auto"
+        data-srcset="/images/categories/workshop.png,  1.5x,  2x"
+        data-src=""
+        alt="Banner"
+        title="Banner" /></p>
+<hr>
+<h2 id="intro">Intro</h2>
+<p>On Saturday April 25th 2020 I participated in a threat defense workshop run by <strong>Trend Micro</strong> and <strong>Defcon Toronto</strong>.</p>
+<p>I was excited that the staff at <strong>Defcon Toronto</strong> and <strong>Trend Micro</strong> managed to keep the event going in light of the Covid 19 situation. I was not prepared for a CTF like competition but I rose to the occasion and worked with my team to finish in the top 10.</p>
+<hr>
+<h2 id="review">Review</h2>
+<p>It was a morning/afternoon of fun!</p>
+<p>While I would have preferred a little more of a walkthrough of using <strong>Trend Micro Deep Security</strong> we all had fun exploring and trying to figure things out. Based on my experience Deep Security is a feature rich tool which I only scratched the surface of in this workshop. Some of things I did in this workshop were:</p>
+<ul>
+<li>Find security events for a given host in Deep Security.</li>
+<li>Scan hosts for malware, investigate malware identified.</li>
+<li>Investigate firewall logs to identify command and control servers.</li>
+<li>As well as some CTF like challenges (discover the destination port for the C2 server, crack a zip file, etc.</li>
+</ul>
+<p>Out of respect for the organizers and Trend Micro I will not post any guides or solutions to any of the challenges.</p>
+<hr>
+<h2 id="exploring-deep-security-after-the-workshop">Exploring Deep Security After the Workshop</h2>
+<p>Thankfully the organizers left all the materials online for one extra day so I can explore some of the bells and whistles of Deep Security. I am going in with the mindset that I am the one configuring Deep Security for an organization.</p>
+<h3 id="adding-a-computer-to-deep-security">Adding a computer to Deep Security</h3>
+<p>Accessing the <strong>Computers</strong> page you can manage computers that are part of the Deep Security ecosystem. This includes an individual host or virtual machine, an AWS/Azure/vCloud/vCenter account or an Active Directory forest. There are three options when adding a computer:</p>
+<p><figure><a class="lightgallery" href="/images/threat-def-dc416-4-2020/computers-tab.png" title="Trend Micro Deep Security Computers Tab" data-thumbnail="/images/threat-def-dc416-4-2020/computers-tab.png" data-sub-html="<h2>Computers Tab</h2><p>Trend Micro Deep Security Computers Tab</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-sizes="auto"
+            data-srcset="/images/threat-def-dc416-4-2020/computers-tab.png, /images/threat-def-dc416-4-2020/computers-tab.png 1.5x, /images/threat-def-dc416-4-2020/computers-tab.png 2x"
+            data-src="/images/threat-def-dc416-4-2020/computers-tab.png"
+            alt="Computers Tab" />
+    </a><figcaption class="image-caption">Computers Tab</figcaption>
+    </figure></p>
+<ul>
+<li>Server Initiated (Added through the computers page)</li>
+<li>Agent Initiated (Added by the agent using the agent software which you can download from Deep Security)
+<ul>
+<li>This can be disabled by Unchecking or restricting the <strong>&ldquo;Allow Agent-Initiated Activation&rdquo;</strong> setting.</li>
+</ul>
+</li>
+<li>Deployment scripts which can then be distributed using your configuration management suite of choice (Ansible, Chef, Puppet, etc.)</li>
+</ul>
+<p><figure><a class="lightgallery" href="/images/threat-def-dc416-4-2020/deployment-script.png" title="Trend Micro Deep Security Deployment Script" data-thumbnail="/images/threat-def-dc416-4-2020/deployment-script.png" data-sub-html="<h2>Example Linux Deployment Script, the lower 1/2 of the page is the script itself.</h2><p>Trend Micro Deep Security Deployment Script</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-sizes="auto"
+            data-srcset="/images/threat-def-dc416-4-2020/deployment-script.png, /images/threat-def-dc416-4-2020/deployment-script.png 1.5x, /images/threat-def-dc416-4-2020/deployment-script.png 2x"
+            data-src="/images/threat-def-dc416-4-2020/deployment-script.png"
+            alt="Example Linux Deployment Script, the lower 1/2 of the page is the script itself." />
+    </a><figcaption class="image-caption">Example Linux Deployment Script, the lower 1/2 of the page is the script itself.</figcaption>
+    </figure></p>
+<h3 id="forwarding-deep-security-events-to-existing-infrastructure">Forwarding Deep Security Events to existing infrastructure.</h3>
+<p>Since it is entirely possible that you already have security infrastructure before you adopted Deep Security there are options to forward Deep Security events via:</p>
+<ul>
+<li>Syslog (to either a syslog server or perhaps a logstash pipeline)</li>
+<li>AWS Simple Notification Service</li>
+<li>SNMP to something like Zabbix or Nagios</li>
+</ul>
+<p><figure><a class="lightgallery" href="/images/threat-def-dc416-4-2020/forwarding-events.png" title="Trend Micro Deep Security Forwarding Events" data-thumbnail="/images/threat-def-dc416-4-2020/forwarding-events.png" data-sub-html="<h2>Forwarding Events Window</h2><p>Trend Micro Deep Security Forwarding Events</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-sizes="auto"
+            data-srcset="/images/threat-def-dc416-4-2020/forwarding-events.png, /images/threat-def-dc416-4-2020/forwarding-events.png 1.5x, /images/threat-def-dc416-4-2020/forwarding-events.png 2x"
+            data-src="/images/threat-def-dc416-4-2020/forwarding-events.png"
+            alt="Forwarding Events Window" />
+    </a><figcaption class="image-caption">Forwarding Events Window</figcaption>
+    </figure></p>
+<h3 id="building-policies-and-rules-for-your-computers">Building policies and rules for your computers.</h3>
+<p>The <strong>Policies</strong> tab shows the different rules, lists (directories, IPs, Ports, etc.) and other settings that can be applied to a policy. This policy can then be applied to specific computers in your environment.</p>
+<p>The different rule categories are:</p>
+<ul>
+<li>Firewall Rules</li>
+<li>Intrusion Prevention System Rules</li>
+<li>Integrity Monitoring Rules (File, Registry or custom rules using XML)</li>
+<li>Log inspection rules (Configure what service logs get ingested)</li>
+<li>Application Control Rules (Control what applications can run and under what conditions)</li>
+</ul>
+<p>An example policy could be using Deep Security to configure the firewall as opposed to using group policy on windows hosts. Or logging file integrity changes for a specific application service directory.</p>
+<p><figure><a class="lightgallery" href="/images/threat-def-dc416-4-2020/firewall-rules.png" title="Trend Micro Deep Security Firewall Rules" data-thumbnail="/images/threat-def-dc416-4-2020/firewall-rules.png" data-sub-html="<h2>Firewall Section of Policy Rules</h2><p>Trend Micro Deep Security Firewall Rules</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-sizes="auto"
+            data-srcset="/images/threat-def-dc416-4-2020/firewall-rules.png, /images/threat-def-dc416-4-2020/firewall-rules.png 1.5x, /images/threat-def-dc416-4-2020/firewall-rules.png 2x"
+            data-src="/images/threat-def-dc416-4-2020/firewall-rules.png"
+            alt="Firewall Section of Policy Rules" />
+    </a><figcaption class="image-caption">Firewall Section of Policy Rules</figcaption>
+    </figure></p>
+<hr>
+<h2 id="future-works--ideas-i-would-like-to-explore">Future works / ideas I would like to explore:</h2>
+<p>According to the documentation there is an API that can be used to operate essentially all of Deep Security. It even comes with a library you can use in Python, Java Script and Java. As I develop an understanding of security automation use cases I could see this being a useful tool.</p>
+<hr>
+<h2 id="closing-remarks">Closing Remarks</h2>
+<p>I would like to thank the group over at <strong>Trend Micro and Defcon Toronto</strong> for putting this workshop together. If you live in the Greater Toronto Area I highly recommend you join the <a href="https://dc416.com" target="_blank" rel="noopener noreffer">Defcon Toronto</a>
+ community. I would also like to give a special thanks to <strong>Thomas</strong> and <strong>Majid</strong> for being great team mates, even though we were short one person we did very well.</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>The article was updated on 2020-04-25</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/workshops">Workshops</a>,&nbsp;<a href="/tags/threat-defense">Threat Defense</a>,&nbsp;<a href="/tags/dc416">DC416</a>,&nbsp;<a href="/tags/trend-micro">Trend Micro</a></section>
+        <section>
+            <span><a href="javascript:window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/issessions-presentation-3-2020/" class="prev" rel="prev" title="A little something about homelabs @ ISSessions 3/27/2020"><i class="fas fa-angle-left fa-fw"></i>A little something about homelabs @ ISSessions 3/27/2020</a></div>
+</div>
+<div class="comment"></div>
+    </article></div>
+            </main><footer class="footer">
+    <div class="copyright"><div class="copyright-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer"><i class="far fa-heart fa-fw"></i> LoveIt</a>
+        </div>
+
+        <div class="copyright-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Costa Kavidas</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    </div>
+</footer>
+</div><a href="#" class="dynamic-to-top animated faster" id="dynamic-to-top">
+            <i class="fas fa-chevron-up fa-fw"></i>
+        </a><script>
+        document.addEventListener('DOMContentLoaded', function () {
+            lightGallery(document.getElementById('content'), {
+                selector: '.lightgallery',
+                speed: 400,
+                hideBarsDelay: 2000,
+                thumbnail: true,
+                exThumbImage: 'data-thumbnail',
+                thumbWidth: 80,
+                thumbContHeight: 80,
+            });
+        });
+    </script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script src="/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/lg-zoom.min.js"></script><script src="/js/theme.min.js"></script></body>
+</html>

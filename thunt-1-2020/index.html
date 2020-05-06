@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Threat Hunting Workshop 1/18/2020 | Costa Kavidas | Your Friend In Infosec</title>
+        <meta name="Description" content="On Saturday January 18th 2020 I participated in a threat hunting workshop run by Black Hills Information Security"><meta property="og:title" content="Threat Hunting Workshop 1/18/2020" />
+<meta property="og:description" content="On Saturday January 18th 2020 I participated in a threat hunting workshop run by Black Hills Information Security" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ckavidas.github.io/thunt-1-2020/" />
+<meta property="article:published_time" content="2020-01-18T17:55:28+08:00" />
+<meta property="article:modified_time" content="2020-01-18T17:55:28+08:00" /><meta property="og:site_name" content="Costa Kavidas | Your Friend In Infosec" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Threat Hunting Workshop 1/18/2020"/>
+<meta name="twitter:description" content="On Saturday January 18th 2020 I participated in a threat hunting workshop run by Black Hills Information Security"/>
+<meta name="theme-color" content="#ffffff">
+<meta name="msapplication-TileColor" content="#da532c">
+<link rel="canonical" href="https://ckavidas.github.io/thunt-1-2020/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="next" href="https://ckavidas.github.io/ctf-presentation-cshub-3-2020/" /><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Threat Hunting Workshop 1\/18\/2020",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/ckavidas.github.io\/thunt-1-2020\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/ckavidas.github.io\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "Workshops, Threat Hunting, Bro, Zeek, RITA, BHIS","wordcount":  873 ,
+        "url": "https:\/\/ckavidas.github.io\/thunt-1-2020\/","datePublished": "2020-01-18","dateModified": "2020-01-18","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                "@type": "Organization",
+                "name": "Costa Kavidas",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/ckavidas.github.io\/logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "Costa"
+            },"description": "On Saturday January 18th 2020 I participated in a threat hunting workshop run by Black Hills Information Security"
+    }
+    </script></head>
+    <body><script>
+            if (!window.localStorage || !window.localStorage.getItem('theme')) {window.isDark = 'dark' === 'dark';} else {
+                window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            }
+            window.isDark && document.body.classList.add('dark-theme');
+        </script><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/">Costa Kavidas | Your Friend In Infosec</a>
+        </div>
+        <div class="menu"><a class="menu-item" href="/posts/" rel="noopener noreffer">Posts</a><a class="menu-item" href="/categories/" rel="noopener noreffer">Categories</a><a class="menu-item" href="/about/" rel="noopener noreffer">About</a><a class="menu-item" href="https://github.com/ckavidas" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><span class="menu-item">|</span>
+            <a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-wrapper">
+        <div class="header-container">
+            <div class="header-title">
+                <a href="/">Costa Kavidas | Your Friend In Infosec</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="" rel="noopener noreffer">Posts</a><a class="menu-item" href="/categories/" title="" rel="noopener noreffer">Categories</a><a class="menu-item" href="/about/" title="" rel="noopener noreffer">About</a><a class="menu-item" href="https://github.com/ckavidas" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+
+<script>
+    window.desktopHeaderMode = "fixed";
+    window.mobileHeaderMode = "auto";
+</script>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">Threat Hunting Workshop 1/18/2020</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://ckavidas.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Costa</a>
+</span>&nbsp;
+                    <span class="post-category">included in<a href="/categories/workshops">
+                                <i class="far fa-folder fa-fw"></i>Workshops
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-01-18>2020-01-18</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 873 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>5 min&nbsp;<span id="/thunt-1-2020/" class="leancloud_visitors" data-flag-title="Threat Hunting Workshop 1/18/2020">
+                        <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="toc" id="toc-auto">
+                <h2 class="toc-title">Contents</h2>
+                <div class="toc-content" id="toc-content-auto"></div>
+            </div>
+            <div class="toc" id="toc-static">
+                <details>
+                    <summary>
+                        <div class="toc-title">
+                            <span>Contents</span>
+                            <span><i class="details icon fas fa-angle-down"></i></span>
+                        </div>
+                    </summary>
+                    <div class="toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#review">Review</a></li>
+    <li><a href="#lessons-learned">Lessons Learned:</a></li>
+    <li><a href="#example-lab-exercises">Example Lab Exercises:</a>
+      <ul>
+        <li><a href="#finding-long-connections">Finding Long Connections:</a></li>
+        <li><a href="#finding-potential-beacons">Finding Potential Beacons</a></li>
+        <li><a href="#searching-for-command-and-control-over-dns-using-rita">Searching for command and control over DNS using RITA.</a></li>
+      </ul>
+    </li>
+    <li><a href="#future-works--ideas-i-would-like-to-explore">Future works / ideas I would like to explore:</a></li>
+    <li><a href="#closing-remarks">Closing Remarks</a></li>
+  </ul>
+</nav></div>
+                </details>
+            </div><div class="content" id="content"><p><img
+        class="lazyload"
+        src="/svg/loading.small.min.svg"
+        data-sizes="auto"
+        data-srcset="/images/thunt-1-2020/thunt_1-2020_banner.png,  1.5x,  2x"
+        data-src=""
+        alt="Banner"
+        title="Banner" /></p>
+<hr>
+<h2 id="intro">Intro</h2>
+<p>Hello Friends and Happy New Year!</p>
+<p>On Saturday January 18th 2020 I participated in a threat hunting workshop run by <strong>Black Hills Information Security</strong>.</p>
+<p>One of the infosec topics that I am interested in is threat hunting. The idea of searching for “suspicious activity” or indicators of compromise proactively. I was excited to find out that BHIS and Active Countermeasures were running a threat hunting training event for free. The course focuses primarily on network traffic analysis which is great for me because I am currently in a <a href="https://ict.senecacollege.ca/course/spr600?q=course/spr600" target="_blank" rel="noopener noreffer">course</a>
+ focused on intrusion detection where packet analysis is important.</p>
+<hr>
+<h2 id="review">Review</h2>
+<p>My experience was great!</p>
+<p>I appreciated that <a href="https://twitter.com/chris_brenton" target="_blank" rel="noopener noreffer">@Chris_Brenton</a>
+ focused a lot on process. A lot of times when there is a webinar the hosts focus extensibly on how the task is done from a technical standpoint without explaining what we are trying to do and why we are doing it. The tools change from workplace to workplace but the process almost always stays the same. There were technical difficulties and at one point the stream died but at the end of the day we all survived. They are running the same workshop in April and I recommend everyone check twitter and participate.</p>
+<hr>
+<h2 id="lessons-learned">Lessons Learned:</h2>
+<ul>
+<li>A practical process flow of network based threat hunting (looking for persistent connections, automated beacons etc.)</li>
+<li>Detecting DNS tunneling / DNS C2 traffic</li>
+<li>SSL Fingerprinting with JA3</li>
+<li>How to analyze zeek capture files from the linux command line.</li>
+<li>How to analyze zeek capture files using rita.</li>
+</ul>
+<hr>
+<h2 id="example-lab-exercises">Example Lab Exercises:</h2>
+<h3 id="finding-long-connections">Finding Long Connections:</h3>
+<ul>
+<li>The first step is to find out how long the capture file is. You can either use the <strong>capinfos</strong> command or in the event that you do not have the package the same can be acheived using <strong>tcpdump</strong> and <strong>awk</strong>.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Bash" data-lang="Bash">capinfos -ae example.pcap
+tcpdump -tttt -n -r example.pcap <span class="p">|</span> awk <span class="s1">&#39;NR==1; END{PRINT}&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>The second step is to use <strong>bro-cut</strong> to extract the source and destination IPs as well as the duration. In a zeek log those fields are <strong>id.orig_h</strong>, <strong>id.resp_h</strong> and <strong>duration</strong>. Once you have extracted these fields you can pipe the output into sort and grab the first 10 lines using head.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Bash" data-lang="Bash">cat conn.log <span class="p">|</span> bro-cut id.orig_h id.resp_h duration <span class="p">|</span> sort -k3rn <span class="p">|</span> head
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.small.min.svg"
+        data-sizes="auto"
+        data-srcset="/images/thunt-1-2020/thunt-ex-1.PNG,  1.5x,  2x"
+        data-src=""
+        alt="Grab the longest 10 connections"
+        title="Grab the longest 10 connections" /></p>
+<hr>
+<h3 id="finding-potential-beacons">Finding Potential Beacons</h3>
+<ul>
+<li>A beacon is a host machine reaching out to a command and control server. A good first step in trying to find potential beacons is to look for source/destination IP pairs and get a count of how many packets were sent. The relevant fields for this would be source IP and destination IP but you should also consider size. A beacon will have a lot of packets but not a lot of bytes being transmitted (most of the packets will just be heartbeat). The first command I would use is to find the largest counts:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Bash" data-lang="Bash">cat conn.log <span class="p">|</span> bro-cut id.orig_h id.resp_h <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> head
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.small.min.svg"
+        data-sizes="auto"
+        data-srcset="/images/thunt-1-2020/thunt-ex-2-s1.PNG,  1.5x,  2x"
+        data-src=""
+        alt="Find the largest counts"
+        title="Find the largest counts" /></p>
+<ul>
+<li>This will tell us how many connections were made for each pair. The top 3 results are the ones that need more investigation so I will check the size. For example lets use that first conversation with <strong>192.168.88.2</strong> and <strong>165.227.88.15</strong>. We need to use <strong>datamash</strong> to perform aggregate functions so we need to use <strong>grep -v</strong> to remove lines that are empty as well as lines that have a - for data size.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Bash" data-lang="Bash">cat conn.log <span class="p">|</span> bro-cut id.orig_h id.resp_h orig_bytes <span class="p">|</span> grep 192.168.88.2 <span class="p">|</span> grep 165.227.88.15 <span class="p">|</span> sort <span class="p">|</span> grep -v <span class="s1">&#39;^$&#39;</span> <span class="p">|</span> grep -v <span class="s1">&#39;-&#39;</span> <span class="p">|</span> datamash -g 1,2 max <span class="m">3</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.small.min.svg"
+        data-sizes="auto"
+        data-srcset="/images/thunt-1-2020/thunt-ex-2-s1.PNG,  1.5x,  2x"
+        data-src=""
+        alt="Investigating the connection between 192.168.88.2 and 165.227.88.15"
+        title="Investigating the connection between 192.168.88.2 and 165.227.88.15" /></p>
+<ul>
+<li>As we can see <strong>165.227.88.15</strong> has sent <strong>3673 bytes</strong> and <strong>192.168.88.2 has only sent 262 bytes</strong>. When a pair of hosts send <strong>108858 packets</strong> but only <strong>3935 bytes</strong> of total data that leads me to beleive that these may be beacons which require additional investigation.</li>
+</ul>
+<hr>
+<h3 id="searching-for-command-and-control-over-dns-using-rita">Searching for command and control over DNS using RITA.</h3>
+<ul>
+<li><strong>RITA (Real Intelligence Threat Analytics)</strong> is an open source framework for network traffic analysis from Active Countermeasures. RITA reads Bro/Zeek logs and has built in functions to do some of the tasks we worked on in the workshop (searching for beacons, dns tunneling etc.) RITA is much easier to use than the linux commands we were gluing together.</li>
+<li>For example here is how you would search for DNS command and control or DNS tunneling using RITA.
+<img
+        class="lazyload"
+        src="/svg/loading.small.min.svg"
+        data-sizes="auto"
+        data-srcset="/images/thunt-1-2020/thunt-ex-3-s1.PNG,  1.5x,  2x"
+        data-src=""
+        alt="Finding the domains with the most requests"
+        title="Finding the domains with the most requests" /></li>
+<li>Lets drill down and see what some of these requests are going to <strong>r-1x.com</strong>
+<img
+        class="lazyload"
+        src="/svg/loading.small.min.svg"
+        data-sizes="auto"
+        data-srcset="/images/thunt-1-2020/thunt-ex-3-s2.PNG,  1.5x,  2x"
+        data-src=""
+        alt="DNS requests going to r-1x.com"
+        title="DNS requests going to r-1x.com" /></li>
+<li>As we can see the domain names being resolved are garbage, most likely command and control traffic.</li>
+<li>One added benefit of using RITA to analyze your Zeek logs is that it stores the Zeek logs in a database (mongodb) as opposed to reading the Zeek logs.</li>
+</ul>
+<hr>
+<h2 id="future-works--ideas-i-would-like-to-explore">Future works / ideas I would like to explore:</h2>
+<ul>
+<li>Since the workshop focuses on network based threat hunting, I would like to explore EDR based threat hunting in the future.</li>
+<li>I would like to learn more about RITA, for example is it possible to build your own functions.</li>
+</ul>
+<hr>
+<h2 id="closing-remarks">Closing Remarks</h2>
+<p>I would like to thank the group over at <strong>Black Hills Information Security</strong> for putting this workshop together. I highly recommend anyone interested in cybersecurity take a look at their youtube channel.</p>
+<ul>
+<li><a href="https://twitter.com/Chris_Brenton" target="_blank" rel="noopener noreffer">__@Chris_Brenton</a>
+</li>
+<li><a href="https://twitter.com/strandjs" target="_blank" rel="noopener noreffer">__@strandjs</a>
+</li>
+<li><strong>Shelby and Bill Sterns</strong> (Could not find their social links)</li>
+</ul></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>The article was updated on 2020-01-18</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/workshops">Workshops</a>,&nbsp;<a href="/tags/threat-hunting">Threat Hunting</a>,&nbsp;<a href="/tags/bro">Bro</a>,&nbsp;<a href="/tags/zeek">Zeek</a>,&nbsp;<a href="/tags/rita">RITA</a>,&nbsp;<a href="/tags/bhis">BHIS</a></section>
+        <section>
+            <span><a href="javascript:window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/ctf-presentation-cshub-3-2020/" class="next" rel="next" title="Intro to CTF presentation @ CSHUB 3/13/2020">Intro to CTF presentation @ CSHUB 3/13/2020<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div class="comment"></div>
+    </article></div>
+            </main><footer class="footer">
+    <div class="copyright"><div class="copyright-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer"><i class="far fa-heart fa-fw"></i> LoveIt</a>
+        </div>
+
+        <div class="copyright-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Costa Kavidas</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    </div>
+</footer>
+</div><a href="#" class="dynamic-to-top animated faster" id="dynamic-to-top">
+            <i class="fas fa-chevron-up fa-fw"></i>
+        </a><script>
+        document.addEventListener('DOMContentLoaded', function () {
+            lightGallery(document.getElementById('content'), {
+                selector: '.lightgallery',
+                speed: 400,
+                hideBarsDelay: 2000,
+                thumbnail: true,
+                exThumbImage: 'data-thumbnail',
+                thumbWidth: 80,
+                thumbContHeight: 80,
+            });
+        });
+    </script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script src="/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/lg-zoom.min.js"></script><script src="/js/theme.min.js"></script></body>
+</html>

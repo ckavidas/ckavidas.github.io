@@ -1,0 +1,71 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Costa Kavidas | Your Friend In Infosec | Costa Kavidas | Your Friend In Infosec</title>
+        <link>https://ckavidas.github.io/</link>
+        <description>Costa Kavidas | Your Friend In Infosec | Costa Kavidas | Your Friend In Infosec</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 21 Apr 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://ckavidas.github.io/" rel="self" type="application/rss+xml" /><item>
+                <title>Posts</title>
+                <link>https://ckavidas.github.io/posts/</link>
+                <pubDate>Sat, 25 Apr 2020 00:00:00 &#43;0000</pubDate><guid>https://ckavidas.github.io/posts/</guid>
+                <description></description>
+            </item><item>
+                <title>About Me</title>
+                <link>https://ckavidas.github.io/about/</link>
+                <pubDate>Tue, 21 Apr 2020 00:00:00 &#43;0000</pubDate><guid>https://ckavidas.github.io/about/</guid>
+                <description>&lt;p&gt;&lt;figure&gt;&lt;a class=&#34;lightgallery&#34; href=&#34;https://ckavidas.github.io/images/about/hello_world_banner.png&#34; title=&#34;Hello World!&#34; data-thumbnail=&#34;/images/about/hello_world_banner.png&#34; data-sub-html=&#34;&lt;h2&gt;Welcome to my blog!&lt;/h2&gt;&lt;p&gt;Hello World!&lt;/p&gt;&#34;&gt;
+        &lt;img
+            class=&#34;lazyload&#34;
+            src=&#34;https://ckavidas.github.io/svg/loading.min.svg&#34;
+            data-sizes=&#34;auto&#34;
+            data-srcset=&#34;https://ckavidas.github.io/images/about/hello_world_banner.png, https://ckavidas.github.io/images/about/hello_world_banner.png 1.5x, https://ckavidas.github.io/images/about/hello_world_banner.png 2x&#34;
+            data-src=&#34;https://ckavidas.github.io/images/about/hello_world_banner.png&#34;
+            alt=&#34;Welcome to my blog!&#34; /&gt;
+    &lt;/a&gt;&lt;figcaption class=&#34;image-caption&#34;&gt;Welcome to my blog!&lt;/figcaption&gt;
+    &lt;/figure&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;my-name-is-costa-kavidas-and-i-am-a-student-in-seneca-colleges-informatics-and-security-degree-programh2&#34;&gt;My name is Costa Kavidas and I am a student in Seneca College&amp;rsquo;s Informatics and Security degree program.&lt;/h2&gt;&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;my-primary-interests-include&#34;&gt;My primary interests include:&lt;/h3&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Security Engineering&lt;/li&gt;
+&lt;li&gt;Threat hunting&lt;/li&gt;
+&lt;li&gt;Offensive Security&lt;/li&gt;
+&lt;li&gt;System Administration / Homelab&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;my-passions-outside-of-infosec-include&#34;&gt;My passions outside of infosec include:&lt;/h3&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Teaching and sharing the skills I have picked up through:
+&lt;ul&gt;
+&lt;li&gt;Presentations&lt;/li&gt;
+&lt;li&gt;Mentoring&lt;/li&gt;
+&lt;li&gt;And now blogs 😎&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Listening to music&lt;/li&gt;
+&lt;li&gt;Playing video games&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-goal-of-this-blog-is-to-share-projects-that-i-am-working-on-such-as&#34;&gt;The goal of this blog is to share projects that I am working on such as:&lt;/h3&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Home lab activities, testing different technologies, sharing scripts and tools.&lt;/li&gt;
+&lt;li&gt;Provide guides for tools I have worked with.&lt;/li&gt;
+&lt;li&gt;Writeupts on my road to OSCP&lt;/li&gt;
+&lt;li&gt;Reviews of workshops and activities I have participated in.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;if-you-would-like-to-contact-me&#34;&gt;If you would like to contact me:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;DM me on twitter &lt;strong&gt;&lt;a href=&#34;https://twitter.com/ckavidas&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer&#34;&gt;@ckavidas&lt;/a&gt;
+&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Connect with me on linkedin &lt;strong&gt;&lt;a href=&#34;https://linkedin.com/in/costa-kavidas&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer&#34;&gt;Costa Kavidas&lt;/a&gt;
+&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Message me on discord &lt;strong&gt;CK#4027&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Message me on Bloodhound Slack &lt;strong&gt;@CK&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+            </item></channel>
+</rss>

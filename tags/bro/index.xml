@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bro on Costa Kavidas | Your Friend In Infosec</title>
+    <link>https://ckavidas.github.io/tags/bro/</link>
+    <description>Recent content in Bro on Costa Kavidas | Your Friend In Infosec</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sat, 18 Jan 2020 17:55:28 +0800</lastBuildDate>
+    
+	<atom:link href="https://ckavidas.github.io/tags/bro/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Threat Hunting Workshop 1/18/2020</title>
+      <link>https://ckavidas.github.io/thunt-1-2020/</link>
+      <pubDate>Sat, 18 Jan 2020 17:55:28 +0800</pubDate>
+      
+      <guid>https://ckavidas.github.io/thunt-1-2020/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
