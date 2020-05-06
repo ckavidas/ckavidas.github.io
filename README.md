@@ -2,4 +2,4 @@
 
 ___
 
-## Visit it at [ckavidas.github.io](https://www.ckavidas.github.io)
+## Visit it at [ckavidas.github.io](https://ckavidas.github.io)
