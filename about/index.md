@@ -14,6 +14,8 @@ ___
 * System Administration / Homelab
 ___
 #### Some of my personal accomplishments include:
+* Diploma in __Computer Networking and Technical Support__ from Seneca College (2016)
+* Degree in __Informatics and Security__ from Seneca College (Current)
 * President of Seneca College's __Pentesting & Capture the Flag Club__ (2019)
     ##### Some CTF Competitions I participated in:
     * Tracelabs Missing Person CTFs (At Seneca and with Pride Toronto)
@@ -21,9 +23,7 @@ ___
     * CMD+CTRL Cyber Range CTF (Owasp 2019)
     * Canadian Collegiate Cyber Experience (C3X - Red Forest 2019)
     * CyberSci Toronto 2020
-    * Trend Micro Threat Defense Workshop/CTF
-* Degree in __Informatics and Security__ from Seneca College (Current)
-* Diploma in __Computer Networking and Technical Support__ from Seneca College (2016)
+    * Trend Micro Threat Defense Workshop/CTF (2020)
 ___
 #### The goal of this blog is to share projects that I am working on such as:
 ___
@@ -46,3 +46,4 @@ ___
 * Connect with me on linkedin __[Costa Kavidas](https://linkedin.com/in/costa-kavidas)__
 * Message me on discord __CK#4027__
 * Message me on Bloodhound Slack __@CK__
+
