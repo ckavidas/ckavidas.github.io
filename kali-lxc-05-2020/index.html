@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Setting Up Kali Linux as an LXC Container | Costa Kavidas | Your Friend In Infosec</title>
+        <meta name="Description" content="Setting up Kali Linux as an LXC container over using a VM on linux hosts."><meta property="og:title" content="Setting Up Kali Linux as an LXC Container" />
+<meta property="og:description" content="Setting up Kali Linux as an LXC container over using a VM on linux hosts." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ckavidas.github.io/kali-lxc-05-2020/" />
+<meta property="article:published_time" content="2020-05-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-13T00:00:00+00:00" /><meta property="og:site_name" content="Costa Kavidas | Your Friend In Infosec" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Setting Up Kali Linux as an LXC Container"/>
+<meta name="twitter:description" content="Setting up Kali Linux as an LXC container over using a VM on linux hosts."/>
+<meta name="theme-color" content="#ffffff">
+<meta name="msapplication-TileColor" content="#da532c">
+<link rel="canonical" href="https://ckavidas.github.io/kali-lxc-05-2020/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="prev" href="https://ckavidas.github.io/threat-def-dc416-4-2020/" /><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Setting Up Kali Linux as an LXC Container",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/ckavidas.github.io\/kali-lxc-05-2020\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/ckavidas.github.io\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "Guide, LXC","wordcount":  651 ,
+        "url": "https:\/\/ckavidas.github.io\/kali-lxc-05-2020\/","datePublished": "2020-05-13","dateModified": "2020-05-13","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                "@type": "Organization",
+                "name": "Costa Kavidas",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/ckavidas.github.io\/logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "Costa"
+            },"description": "Setting up Kali Linux as an LXC container over using a VM on linux hosts."
+    }
+    </script></head>
+    <body><script>
+            if (!window.localStorage || !window.localStorage.getItem('theme')) {window.isDark = 'dark' === 'dark';} else {
+                window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            }
+            window.isDark && document.body.classList.add('dark-theme');
+        </script><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/">Costa Kavidas | Your Friend In Infosec</a>
+        </div>
+        <div class="menu"><a class="menu-item" href="/posts/" rel="noopener noreffer">Posts</a><a class="menu-item" href="/categories/" rel="noopener noreffer">Categories</a><a class="menu-item" href="/about/" rel="noopener noreffer">About</a><a class="menu-item" href="https://github.com/ckavidas" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><span class="menu-item">|</span>
+            <a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-wrapper">
+        <div class="header-container">
+            <div class="header-title">
+                <a href="/">Costa Kavidas | Your Friend In Infosec</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="" rel="noopener noreffer">Posts</a><a class="menu-item" href="/categories/" title="" rel="noopener noreffer">Categories</a><a class="menu-item" href="/about/" title="" rel="noopener noreffer">About</a><a class="menu-item" href="https://github.com/ckavidas" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+
+<script>
+    window.desktopHeaderMode = "fixed";
+    window.mobileHeaderMode = "auto";
+</script>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">Setting Up Kali Linux as an LXC Container</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://ckavidas.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Costa</a>
+</span>&nbsp;
+                    <span class="post-category">included in<a href="/categories/guides">
+                                <i class="far fa-folder fa-fw"></i>Guides
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-13>2020-05-13</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 651 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>4 min&nbsp;<span id="/kali-lxc-05-2020/" class="leancloud_visitors" data-flag-title="Setting Up Kali Linux as an LXC Container">
+                        <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="toc" id="toc-auto">
+                <h2 class="toc-title">Contents</h2>
+                <div class="toc-content" id="toc-content-auto"></div>
+            </div>
+            <div class="toc" id="toc-static">
+                <details>
+                    <summary>
+                        <div class="toc-title">
+                            <span>Contents</span>
+                            <span><i class="details icon fas fa-angle-down"></i></span>
+                        </div>
+                    </summary>
+                    <div class="toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#why-lxc-and-not-docker">Why LXC and not Docker?</a></li>
+    <li><a href="#what-do-i-need-to-get-started">What do I need to get started?</a></li>
+    <li><a href="#setting-everything-up">Setting Everything up</a></li>
+    <li><a href="#references">References:</a></li>
+  </ul>
+</nav></div>
+                </details>
+            </div><div class="content" id="content"><p><img
+        class="lazyload"
+        src="/svg/loading.small.min.svg"
+        data-sizes="auto"
+        data-srcset="/images/categories/guide.png,  1.5x,  2x"
+        data-src=""
+        alt="Banner"
+        title="Banner" /></p>
+<hr>
+<h2 id="intro">Intro</h2>
+<p><strong>Kali Linux</strong> is the go-to linux distribution for penetration testing and CTF challenges. Whenever there was an assignment that I needed to do or a network attack that I needed to simulate I would open vmware and start my kali VM. After switching from running Windows 10 to Pop_OS! 20.04 I decided it would be a great time to explore some of the alternative methods of getting kali linux on your system such as using docker or using an LXC container.</p>
+<hr>
+<h2 id="why-lxc-and-not-docker">Why LXC and not Docker?</h2>
+<p>Short answer: LXC containers are better for virtualizing systems. Docker containers in general are designed to virtualize single applications, the containers are small containing only the necessary components to serve up a specific application. By comparison we want our Kali LXC container to contain Kali linux, any packages we install or update, and anything we are working on. While it is possible to do the same thing on docker this task seems better suited for an LXC container.</p>
+<hr>
+<h2 id="what-do-i-need-to-get-started">What do I need to get started?</h2>
+<p>I will cover how I set it up, this is just a reference for you.</p>
+<ul>
+<li>A linux system with LXC (use LXD if you are on an ubuntu-based distro like Pop_OS!)
+<ul>
+<li><a href="https://www.tecmint.com/install-create-run-lxc-linux-containers-on-centos/" target="_blank" rel="noopener noreffer">Installing LXC on RHEL/Centos</a>
+</li>
+<li><a href="https://ubuntu.com/blog/lxd-in-4-easy-steps" target="_blank" rel="noopener noreffer">Installing LXD on Ubuntu</a>
+</li>
+</ul>
+</li>
+<li>The Kali Linux image from the <a href="https://us.images.linuxcontainers.org/" target="_blank" rel="noopener noreffer">linux containers image server</a>
+</li>
+</ul>
+<hr>
+<h2 id="setting-everything-up">Setting Everything up</h2>
+<ol>
+<li>First step is to install LXC (or in my case LXD)</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo install lxd
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>Initialize lxd (If you get permission denied issues add yourself to the lxd group.)</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">snap init
+
+Would you like to use LXD clustering? (yes/no) [default=no]: 
+Do you want to configure a new storage pool? (yes/no) [default=yes]: 
+Name of the new storage pool [default=default]: lxcfs
+Name of the storage backend to use (btrfs, dir, lvm, zfs, ceph) [default=zfs]: 
+Create a new ZFS pool? (yes/no) [default=yes]: 
+Would you like to use an existing block device? (yes/no) [default=no]: 
+Size in GB of the new loop device (1GB minimum) [default=43GB]: 
+Would you like to connect to a MAAS server? (yes/no) [default=no]: 
+Would you like to create a new local network bridge? (yes/no) [default=yes]: 
+What should the new bridge be called? [default=lxdbr0]: 
+What IPv4 address should be used? (CIDR subnet notation, “auto” or “none”) [default=auto]: 
+What IPv6 address should be used? (CIDR subnet notation, “auto” or “none”) [default=auto]: 
+Would you like LXD to be available over the network? (yes/no) [default=no]: 
+Would you like stale cached images to be updated automatically? (yes/no) [default=yes] 
+Would you like a YAML &#34;lxd init&#34; preseed to be printed? (yes/no) [default=no]: 
+</code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>Create the kali linux container</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">lxc launch images:kali/current/amd64 ck-kali
+</code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>Drop into an interactive shell on the container.</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">lxc exec ck-kali /bin/bash
+</code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li>I prepared a <a href="https://raw.githubusercontent.com/ckavidas/scripts/master/kali-lxc-setup.bash" target="_blank" rel="noopener noreffer">script</a>
+ that will help you with:</li>
+</ol>
+<ul>
+<li>Updating, upgrading and installing kali packages</li>
+<li>Add a kali user and configuring ssh</li>
+<li>Installing x2go and the kali xfce4 desktop environment</li>
+<li>Unfortunately wget and curl are missing so you will have to install wget before you can start. I will look into the possibility of using cloud init to do that for you.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">apt update &amp;&amp; apt install wget -y
+wget https://raw.githubusercontent.com/ckavidas/scripts/master/kali-lxc-setup.bash
+chmod 744 kali-lxc-setup.bash
+./kali-lxc-setup.bash
+</code></pre></td></tr></table>
+</div>
+</div><p>While there are instructions on the page to get a gui on the local system I wanted to have the ability to use x2go so I can access the Kali from my laptop.</p>
+<ol start="6">
+<li>Point your x2go or pyhocagui client to the kali container.</li>
+</ol>
+<p><figure><a class="lightgallery" href="/images/kali-lxc-5-2020/forwarded-x-session.png" title="Example 1: Using x2go to access the desktop environment." data-thumbnail="/images/kali-lxc-5-2020/forwarded-x-session.png" data-sub-html="<h2>Example 1: Using x2go to access the desktop environment.</h2><p>Example 1: Using x2go to access the desktop environment.</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-sizes="auto"
+            data-srcset="/images/kali-lxc-5-2020/forwarded-x-session.png, /images/kali-lxc-5-2020/forwarded-x-session.png 1.5x, /images/kali-lxc-5-2020/forwarded-x-session.png 2x"
+            data-src="/images/kali-lxc-5-2020/forwarded-x-session.png"
+            alt="Example 1: Using x2go to access the desktop environment." />
+    </a><figcaption class="image-caption">Example 1: Using x2go to access the desktop environment.</figcaption>
+    </figure>
+<figure><a class="lightgallery" href="/images/kali-lxc-5-2020/app-forwarding.png" title="Example 2: Using x2go to forward specific applications to the host." data-thumbnail="/images/kali-lxc-5-2020/app-forwarding.png" data-sub-html="<h2>Example 2: Using x2go to forward specific applications to the host.</h2><p>Example 2: Using x2go to forward specific applications to the host.</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-sizes="auto"
+            data-srcset="/images/kali-lxc-5-2020/app-forwarding.png, /images/kali-lxc-5-2020/app-forwarding.png 1.5x, /images/kali-lxc-5-2020/app-forwarding.png 2x"
+            data-src="/images/kali-lxc-5-2020/app-forwarding.png"
+            alt="Example 2: Using x2go to forward specific applications to the host." />
+    </a><figcaption class="image-caption">Example 2: Using x2go to forward specific applications to the host.</figcaption>
+    </figure></p>
+<hr>
+<h2 id="references">References:</h2>
+<ul>
+<li><a href="https://www.kali.org/docs/containers/kalilinux-lxc-images/" target="_blank" rel="noopener noreffer">Kali Linux LXC/LXD Images Documentation</a>
+</li>
+<li><a href="https://www.kali.org/docs/general-use/xfce-faq/" target="_blank" rel="noopener noreffer">Kali Linux XFCE FAQ</a>
+</li>
+</ul></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>The article was updated on 2020-05-13</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/guide">Guide</a>,&nbsp;<a href="/tags/lxc">LXC</a></section>
+        <section>
+            <span><a href="javascript:window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/threat-def-dc416-4-2020/" class="prev" rel="prev" title="Threat Defense Workshop with Trend Micro and DC416"><i class="fas fa-angle-left fa-fw"></i>Threat Defense Workshop with Trend Micro and DC416</a></div>
+</div>
+<div class="comment"></div>
+    </article></div>
+            </main><footer class="footer">
+    <div class="copyright"><div class="copyright-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer"><i class="far fa-heart fa-fw"></i> LoveIt</a>
+        </div>
+
+        <div class="copyright-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Costa Kavidas</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    </div>
+</footer>
+</div><a href="#" class="dynamic-to-top animated faster" id="dynamic-to-top">
+            <i class="fas fa-chevron-up fa-fw"></i>
+        </a><script>
+        document.addEventListener('DOMContentLoaded', function () {
+            lightGallery(document.getElementById('content'), {
+                selector: '.lightgallery',
+                speed: 400,
+                hideBarsDelay: 2000,
+                thumbnail: true,
+                exThumbImage: 'data-thumbnail',
+                thumbWidth: 80,
+                thumbContHeight: 80,
+            });
+        });
+    </script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script src="/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/lg-zoom.min.js"></script><script src="/js/theme.min.js"></script></body>
+</html>
