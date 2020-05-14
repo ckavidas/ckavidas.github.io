@@ -24,12 +24,12 @@ ___
 ## Setting Everything up
 
 1. First step is to install LXC (or in my case LXD)
-```bash
-sudo install lxd
+```
+snap install lxd
 ```
 2. Initialize lxd (If you get permission denied issues add yourself to the lxd group.)
 ```
-snap init
+lxd init
 
 Would you like to use LXD clustering? (yes/no) [default=no]: 
 Do you want to configure a new storage pool? (yes/no) [default=yes]: 
