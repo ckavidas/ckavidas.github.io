@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>workshops on Costa Kavidas | Your Friend In Infosec</title>
+    <title>Workshops on Costa Kavidas | Your Friend In Infosec</title>
     <link>https://ckavidas.github.io/categories/workshops/</link>
-    <description>Recent content in workshops on Costa Kavidas | Your Friend In Infosec</description>
+    <description>Recent content in Workshops on Costa Kavidas | Your Friend In Infosec</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sat, 25 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ckavidas.github.io/categories/workshops/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>OpenSOC CTF with Recon Infosec</title>
+      <link>https://ckavidas.github.io/opensoc-ctf-08-2020/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ckavidas.github.io/opensoc-ctf-08-2020/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Threat Defense Workshop with Trend Micro and DC416</title>

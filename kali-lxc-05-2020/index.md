@@ -62,7 +62,7 @@ lxc exec ck-kali /bin/bash
 * Unfortunately wget and curl are missing so you will have to install wget before you can start. I will look into the possibility of using cloud init to do that for you. 
 ```
 apt update && apt install wget -y
-wget https://raw.githubusercontent.com/ckavidas/scripts/master/kali-lxc-setup.bash
+wget https://raw.githubusercontent.com/ckavidas/scripts/master/kali-lxc-setup/kali-lxc-setup.bash
 chmod 744 kali-lxc-setup.bash
 ./kali-lxc-setup.bash
 ```
