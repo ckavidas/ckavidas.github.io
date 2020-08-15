@@ -12,7 +12,7 @@ On 08/08/2020 and 08/09/2020 I participated in the __OpenSOC CTF__ run by [__Rec
 * [Graylog](https://www.graylog.org/) as a SIEM 
 	* [Kibana](https://www.elastic.co/kibana) was also offered as an optional frontend
 * [Moloch](https://molo.ch/) as a network security monitoring solution
-	* [Suricata](https://suricata-ids.org/) for network security allerts
+	* [Suricata](https://suricata-ids.org/) for network security alerts
 * [Zeek](https://zeek.org/) for networking data
 * [OsQuery](https://osquery.io/) for host information
 * [Velociraptor](https://www.velocidex.com/) for host visibility
@@ -66,8 +66,9 @@ ___
 	* I personally prefer Kibana to Graylog
 	* I would like to include [__Wazuh__](https://wazuh.com/) which is a host-based intrusion detection system.
 	* I would like to build a Zeek Hunting dashboard in Kibana similar to what [__Security Onion__](https://securityonion.net/) has.
-* Adversary similation is something that is well documented, tools like [__Atomic Red Team__](https://github.com/redcanaryco/atomic-red-team) and [__Caldera__](https://github.com/mitre/caldera) exist for example. Simulating regular activity on the other hand is not something I have found a solution for. I will need to pick some people's brains to get an idea on how to do that without it being detectable by the log. (Imagine if all legitimate activity on some host was spawned by abc.exe, you could filter out all events where the parent process is abc.exe)
+* Adversary simulation is something that is well documented, tools like [__Atomic Red Team__](https://github.com/redcanaryco/atomic-red-team) and [__Caldera__](https://github.com/mitre/caldera) exist for example. Simulating regular activity on the other hand is not something I have found a solution for. I will need to pick some people's brains to get an idea on how to do that without it being detectable by the log. (Imagine if all legitimate activity on some host was spawned by abc.exe, you could filter out all events where the parent process is abc.exe)
 
 ___
 ## Closing Remarks
-I would like to thank the group over at [__Recon Infosec__](https://twitter.com/recon_infosec) for putting this event together, most notably [__@eric_capuano__](https://twitter.com/eric_capuano) and [__@shortxstack__](https://twitter.com/shortxstack). If you ever see an OpenSoc event happening, drop everything and go for it. I would also like to give a special thanks to my team mates __Haydzx, TDotDavid and Buz__  for being excellent team mates, even though we were short one person we did incredibly well.
+I would like to thank the group over at [__Recon Infosec__](https://twitter.com/recon_infosec) for putting this event together, most notably [__@eric_capuano__](https://twitter.com/eric_capuano) and [__@shortxstack__](https://twitter.com/shortxstack). If you ever see an OpenSoc event happening, drop everything and go for it. I would also like to give a special thanks to my team mates __[Haydzx](https://twitter.com/haydnjohnson), TDotDavid and Buz__  for being excellent team mates, even though we were short one person we did incredibly well.
+
