@@ -24,6 +24,7 @@ ___
     * Canadian Collegiate Cyber Experience (C3X - Red Forest 2019)
     * CyberSci Toronto 2020
     * Trend Micro Threat Defense Workshop/CTF (2020)
+    * OpenSOC CTF at Defcon 28
 ___
 #### The goal of this blog is to share projects that I am working on such as:
 ___
