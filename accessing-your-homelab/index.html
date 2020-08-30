@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Accessing Your Homelab Remotely | Costa Kavidas | Your Friend In Infosec</title>
+        <meta name="Description" content="A guide to the different ways you can access your homelab remotely."><meta property="og:title" content="Accessing Your Homelab Remotely" />
+<meta property="og:description" content="A guide to the different ways you can access your homelab remotely." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ckavidas.github.io/accessing-your-homelab/" />
+<meta property="article:published_time" content="2020-08-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-08-29T00:00:00+00:00" /><meta property="og:site_name" content="Costa Kavidas | Your Friend In Infosec" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Accessing Your Homelab Remotely"/>
+<meta name="twitter:description" content="A guide to the different ways you can access your homelab remotely."/>
+<meta name="theme-color" content="#ffffff">
+<meta name="msapplication-TileColor" content="#da532c">
+<link rel="canonical" href="https://ckavidas.github.io/accessing-your-homelab/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="prev" href="https://ckavidas.github.io/opensoc-ctf-08-2020/" /><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Accessing Your Homelab Remotely",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/ckavidas.github.io\/accessing-your-homelab\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/ckavidas.github.io\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "Guide, Homelab, Networking","wordcount":  1306 ,
+        "url": "https:\/\/ckavidas.github.io\/accessing-your-homelab\/","datePublished": "2020-08-29","dateModified": "2020-08-29","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                "@type": "Organization",
+                "name": "Costa Kavidas",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/ckavidas.github.io\/logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "Costa"
+            },"description": "A guide to the different ways you can access your homelab remotely."
+    }
+    </script></head>
+    <body><script>
+            if (!window.localStorage || !window.localStorage.getItem('theme')) {window.isDark = 'dark' === 'dark';} else {
+                window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            }
+            window.isDark && document.body.classList.add('dark-theme');
+        </script><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/">Costa Kavidas | Your Friend In Infosec</a>
+        </div>
+        <div class="menu"><a class="menu-item" href="/posts/" rel="noopener noreffer">Posts</a><a class="menu-item" href="/categories/" rel="noopener noreffer">Categories</a><a class="menu-item" href="/about/" rel="noopener noreffer">About</a><a class="menu-item" href="https://github.com/ckavidas" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><span class="menu-item">|</span>
+            <a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-wrapper">
+        <div class="header-container">
+            <div class="header-title">
+                <a href="/">Costa Kavidas | Your Friend In Infosec</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="" rel="noopener noreffer">Posts</a><a class="menu-item" href="/categories/" title="" rel="noopener noreffer">Categories</a><a class="menu-item" href="/about/" title="" rel="noopener noreffer">About</a><a class="menu-item" href="https://github.com/ckavidas" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+
+<script>
+    window.desktopHeaderMode = "fixed";
+    window.mobileHeaderMode = "auto";
+</script>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">Accessing Your Homelab Remotely</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://ckavidas.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Costa</a>
+</span>&nbsp;
+                    <span class="post-category">included in<a href="/categories/guides">
+                                <i class="far fa-folder fa-fw"></i>Guides
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-08-29>2020-08-29</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 1306 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>7 min&nbsp;<span id="/accessing-your-homelab/" class="leancloud_visitors" data-flag-title="Accessing Your Homelab Remotely">
+                        <i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="toc" id="toc-auto">
+                <h2 class="toc-title">Contents</h2>
+                <div class="toc-content" id="toc-content-auto"></div>
+            </div>
+            <div class="toc" id="toc-static">
+                <details>
+                    <summary>
+                        <div class="toc-title">
+                            <span>Contents</span>
+                            <span><i class="details icon fas fa-angle-down"></i></span>
+                        </div>
+                    </summary>
+                    <div class="toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#option-1-port-forwarding-and-dynamic-dns">Option 1: Port Forwarding and Dynamic DNS</a></li>
+    <li><a href="#option-2-zerotier">Option 2: ZeroTier</a></li>
+    <li><a href="#option-3-tailscale">Option 3: Tailscale</a></li>
+    <li><a href="#option-4-custom-hubspoke-network">Option 4: Custom Hub/Spoke Network</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav></div>
+                </details>
+            </div><div class="content" id="content"><p><img
+        class="lazyload"
+        src="/svg/loading.small.min.svg"
+        data-sizes="auto"
+        data-srcset="/images/categories/guide.png,  1.5x,  2x"
+        data-src=""
+        alt="Banner"
+        title="Banner" /></p>
+<hr>
+<h2 id="intro">Intro</h2>
+<p>In a <a href="https://ckavidas.github.io/issessions-presentation-3-2020/" target="_blank" rel="noopener noreffer">previous post</a>
+ I shared some example use cases for your homelab. One of the main reasons for having a homelab was to practice your technical skills and learn new things but one of the other reasons was to set up &ldquo;something cool&rdquo; such as:</p>
+<ul>
+<li>Media servers like Jellyfin, Plex, Emby, Sonarr, etc.</li>
+<li>Game servers for games like Minecraft, CSGO, TF2 and some other games like Fistful of Frags which I have been playing lately.</li>
+<li>Setting up a NAS to backup files</li>
+<li>Self-Hosting applications such as:
+<ul>
+<li>A SearX privacy respecting search engine.</li>
+<li>A Nextcloud instance to host files and provide a syncable calendar and contact list.</li>
+<li>A file syncing service such as Syncthing</li>
+</ul>
+</li>
+</ul>
+<p>One of the questions I get often in regards to setting up a homelab is how to access these services remotely. While it doesnt seem likely that you are going to be accessing your homelab outside of your home any time soon, I thought it would be a good time to explain the various options.</p>
+<hr>
+<h2 id="option-1-port-forwarding-and-dynamic-dns">Option 1: Port Forwarding and Dynamic DNS</h2>
+<p>In this configuration you are going to expose a port on your firewall/modem/router depending on what devices you have in your lab then use source NAT to forward packets from that port to a specific IP/Port. To reduce the complexity of having to remember your public IP address you utilize a dynamic DNS service such as duckdns to point &lt;your_domain_name&gt;.duckdns.org to your public IP address. This DNS service is dynamic and requires that you periodically update what your public IP address is because it is subject to change as a typical home user.</p>
+<p><figure><a class="lightgallery" href="/images/accessing-your-homelab/example-01.png" title="Example-01: Port Forwarding and Dynamic DNS" data-thumbnail="/images/accessing-your-homelab/example-01.png" data-sub-html="<h2>In this example port 8020 on the modem/router combo is being forwarded to port 12322 on the Jellyfin VM.</h2><p>Example-01: Port Forwarding and Dynamic DNS</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-sizes="auto"
+            data-srcset="/images/accessing-your-homelab/example-01.png, /images/accessing-your-homelab/example-01.png 1.5x, /images/accessing-your-homelab/example-01.png 2x"
+            data-src="/images/accessing-your-homelab/example-01.png"
+            alt="In this example port 8020 on the modem/router combo is being forwarded to port 12322 on the Jellyfin VM." />
+    </a><figcaption class="image-caption">In this example port 8020 on the modem/router combo is being forwarded to port 12322 on the Jellyfin VM.</figcaption>
+    </figure></p>
+<p>This method gets the job done but it comes with some security concerns:</p>
+<ul>
+<li>In the event that a vulnerability in this service is exploited an attacker may be able to laterally move inside your homelab network or even worse your home network.</li>
+<li>The service is made available to all users over the internet which may lead to denial of service attacks or brute force attacks.</li>
+</ul>
+<p>A variation of this option is to instead port forward just a VPN service which you would then connect to wherever you are. The same security concerns exists as above, however you can now access a plethora of services while only exposing a single port which is likely to be secure if kept up to date.</p>
+<p><figure><a class="lightgallery" href="/images/accessing-your-homelab/example-02.png" title="Example-02: Port Forwarding and Dynamic DNS &#43; Wireguard" data-thumbnail="/images/accessing-your-homelab/example-02.png" data-sub-html="<h2>In this example a Raspberry Pi has been added with wireguard configured on it</h2><p>Example-02: Port Forwarding and Dynamic DNS &#43; Wireguard</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-sizes="auto"
+            data-srcset="/images/accessing-your-homelab/example-02.png, /images/accessing-your-homelab/example-02.png 1.5x, /images/accessing-your-homelab/example-02.png 2x"
+            data-src="/images/accessing-your-homelab/example-02.png"
+            alt="In this example a Raspberry Pi has been added with wireguard configured on it" />
+    </a><figcaption class="image-caption">In this example a Raspberry Pi has been added with wireguard configured on it</figcaption>
+    </figure></p>
+<hr>
+<h2 id="option-2-zerotier">Option 2: ZeroTier</h2>
+<p>In my <a href="https://ckavidas.github.io/opensoc-ctf-08-2020/" target="_blank" rel="noopener noreffer">post</a>
+ about the OpenSOC competition that I recently participated in I talked a little about ZeroTier. Described on their site as a &ldquo;smart Ethernet switch for planet Earth&rdquo; what ZeroTier does is build an overlay network or a distributed switch network over the internet with everything encrypted. This can be acheived by hosting the ZeroTier controller yourself on a cloud VPS or by using their hosted ZeroTier controllers with free and paid options depending on your needs. I won&rsquo;t go over all the details of how ZeroTier works, the ZeroTier <a href="https://www.zerotier.com/manual/#1" target="_blank" rel="noopener noreffer">manual</a>
+ does a much better job at that. I will however give you a basic rundown of how you would use ZeroTier.</p>
+<ul>
+<li>Create an account with My.ZeroTier.com (you can use your google account as an identity provider if you like.)
+<ul>
+<li>Note: Only one account is necessary, this account is going to build/manage the network.</li>
+</ul>
+</li>
+<li>Once logged in, go to the Networks tab and create a network
+<ul>
+<li>From here you can configure the network addresses you want clients to receive, configure routes (if using a hub/spoke model) or build flow rules.</li>
+</ul>
+</li>
+<li>After building your network install the ZeroTier client on your devices (Windows/Mac/Linux/IOS/Android)</li>
+<li>On the device you would join the network that you created
+<ul>
+<li>Example on linux you would run the command <code>sudo zerotier-cli join 123456789ABCDEF0</code> where <code>123456789ABCDEF0</code> is the network ID of the network you created.</li>
+</ul>
+</li>
+</ul>
+<p>And that is it! at least from the client side. From the My.Zerotier page you can build complex access policies, configure role based access control and even mirror traffic to another source. You can also redirect traffic or segregate traffic using multiple networks.</p>
+<p><figure><a class="lightgallery" href="/images/accessing-your-homelab/example-03.png" title="Example-03: Building a network with ZeroTier" data-thumbnail="/images/accessing-your-homelab/example-03.png" data-sub-html="<h2>In this example the Jellyfin VM has ZeroTier installed and both clients can communicate via the ZeroTier network.</h2><p>Example-03: Building a network with ZeroTier</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-sizes="auto"
+            data-srcset="/images/accessing-your-homelab/example-03.png, /images/accessing-your-homelab/example-03.png 1.5x, /images/accessing-your-homelab/example-03.png 2x"
+            data-src="/images/accessing-your-homelab/example-03.png"
+            alt="In this example the Jellyfin VM has ZeroTier installed and both clients can communicate via the ZeroTier network." />
+    </a><figcaption class="image-caption">In this example the Jellyfin VM has ZeroTier installed and both clients can communicate via the ZeroTier network.</figcaption>
+    </figure></p>
+<hr>
+<h2 id="option-3-tailscale">Option 3: Tailscale</h2>
+<p>Tailscale is a service similar to ZeroTier with the aim of being simpler to use. From a technical perspective Tailscale uses Wireguard as a data plane (that being where packets are being sent) with their Tailscale software acting as the control plane (managing IP addresses and access control policies). The difference between Tailscale and Zerotier is that Tailscale is a mesh network meaning that all nodes are connected to each other directly and the Tailscale software determines how a given peer can communicate to the other peers it is connected to. Tailscale also comes with some interesting features for example it has support for multiple SSO providers such as Google, Okta, Office 365, Azure Active Directory, etc. Tailscale is free for personal use with up to 100 devices. One of the disadvantages is that this free use is tied to a single SSO account, meaning that if you wanted to share a Homelab service with another person you would have to make a Google account for example and share this login with this other person. If you wanted to acheive this without sharing an SSO account it would cost $10 a month for each user.</p>
+<p><figure><a class="lightgallery" href="/images/accessing-your-homelab/example-04.png" title="Example-04: Building a network with Tailscale" data-thumbnail="/images/accessing-your-homelab/example-04.png" data-sub-html="<h2>In this example the Jellyfin VM has Tailscale installed and both clients can communicate directly via a peer to peer network.</h2><p>Example-04: Building a network with Tailscale</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-sizes="auto"
+            data-srcset="/images/accessing-your-homelab/example-04.png, /images/accessing-your-homelab/example-04.png 1.5x, /images/accessing-your-homelab/example-04.png 2x"
+            data-src="/images/accessing-your-homelab/example-04.png"
+            alt="In this example the Jellyfin VM has Tailscale installed and both clients can communicate directly via a peer to peer network." />
+    </a><figcaption class="image-caption">In this example the Jellyfin VM has Tailscale installed and both clients can communicate directly via a peer to peer network.</figcaption>
+    </figure></p>
+<hr>
+<h2 id="option-4-custom-hubspoke-network">Option 4: Custom Hub/Spoke Network</h2>
+<p>Lets say you wanted all the features that ZeroTier provided you but you wanted to run it yourself. You could for example purchase a virtual private server from a cloud provider and configure Wireguard on this machine which will route between your device and the homelab services (or homelab network). From there you can configure a complex firewall policy as well as a dynamic DNS service or a domain name if your VPS has a static IP address.</p>
+<p><figure><a class="lightgallery" href="/images/accessing-your-homelab/example-05.png" title="Example-05: Building a custom hub/spoke network" data-thumbnail="/images/accessing-your-homelab/example-05.png" data-sub-html="<h2>In this example both the Jellyfin VM and the laptop have a peer to peer connection to the VPS which routes their traffic.</h2><p>Example-05: Building a custom hub/spoke network</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-sizes="auto"
+            data-srcset="/images/accessing-your-homelab/example-05.png, /images/accessing-your-homelab/example-05.png 1.5x, /images/accessing-your-homelab/example-05.png 2x"
+            data-src="/images/accessing-your-homelab/example-05.png"
+            alt="In this example both the Jellyfin VM and the laptop have a peer to peer connection to the VPS which routes their traffic." />
+    </a><figcaption class="image-caption">In this example both the Jellyfin VM and the laptop have a peer to peer connection to the VPS which routes their traffic.</figcaption>
+    </figure></p>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article I demonstrated four options for you to connect to your homelab remotely. The question you might be asking is: &ldquo;What is the best option&rdquo; to which I would say it all depends on your needs.</p>
+<ul>
+<li>Would you like the entire internet population to access your service?
+<ul>
+<li>Consider using example 1 where we port forwarded the Jellyfin service.</li>
+</ul>
+</li>
+<li>Would you like a select few individuals to access your service?
+<ul>
+<li>Consider using:
+<ul>
+<li>Zerotier especially if you would like to play around with flow rules.</li>
+<li>Tailscale if these select few individuals are willing to pay $10 a month OR if everyone is willing to share a google account.</li>
+<li>Custom hub/spoke network if you would like to play around with iptables rules.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Would you (and only you) like to access your service(s)?
+<ul>
+<li>Consider using tailscale for simplicity&rsquo;s sake.</li>
+</ul>
+</li>
+</ul></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>The article was updated on 2020-08-29</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/guide">Guide</a>,&nbsp;<a href="/tags/homelab">Homelab</a>,&nbsp;<a href="/tags/networking">Networking</a></section>
+        <section>
+            <span><a href="javascript:window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/opensoc-ctf-08-2020/" class="prev" rel="prev" title="OpenSOC CTF with Recon Infosec"><i class="fas fa-angle-left fa-fw"></i>OpenSOC CTF with Recon Infosec</a></div>
+</div>
+<div class="comment"></div>
+    </article></div>
+            </main><footer class="footer">
+    <div class="copyright"><div class="copyright-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer"><i class="far fa-heart fa-fw"></i> LoveIt</a>
+        </div>
+
+        <div class="copyright-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Costa Kavidas</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    </div>
+</footer>
+</div><a href="#" class="dynamic-to-top animated faster" id="dynamic-to-top">
+            <i class="fas fa-chevron-up fa-fw"></i>
+        </a><script>
+        document.addEventListener('DOMContentLoaded', function () {
+            lightGallery(document.getElementById('content'), {
+                selector: '.lightgallery',
+                speed: 400,
+                hideBarsDelay: 2000,
+                thumbnail: true,
+                exThumbImage: 'data-thumbnail',
+                thumbWidth: 80,
+                thumbContHeight: 80,
+            });
+        });
+    </script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script src="/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/lg-zoom.min.js"></script><script src="/js/theme.min.js"></script></body>
+</html>

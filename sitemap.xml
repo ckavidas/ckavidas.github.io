@@ -2,21 +2,24 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>https://ckavidas.github.io/accessing-your-homelab/</loc><lastmod>2020-08-29T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://ckavidas.github.io/opensoc-ctf-08-2020/</loc><lastmod>2020-08-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://ckavidas.github.io/kali-lxc-05-2020/</loc><lastmod>2020-05-13T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://ckavidas.github.io/threat-def-dc416-4-2020/</loc><lastmod>2020-04-25T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://ckavidas.github.io/issessions-presentation-3-2020/</loc><lastmod>2020-03-27T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://ckavidas.github.io/ctf-presentation-cshub-3-2020/</loc><lastmod>2020-03-13T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://ckavidas.github.io/thunt-1-2020/</loc><lastmod>2020-01-18T17:55:28&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://ckavidas.github.io/categories/</loc><lastmod>2020-08-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://ckavidas.github.io/</loc><lastmod>2020-08-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://ckavidas.github.io/categories/</loc><lastmod>2020-08-29T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://ckavidas.github.io/</loc><lastmod>2020-08-29T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://ckavidas.github.io/tags/guide/</loc><lastmod>2020-08-29T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://ckavidas.github.io/categories/guides/</loc><lastmod>2020-08-29T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://ckavidas.github.io/tags/homelab/</loc><lastmod>2020-08-29T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://ckavidas.github.io/tags/networking/</loc><lastmod>2020-08-29T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://ckavidas.github.io/posts/</loc><lastmod>2020-08-29T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://ckavidas.github.io/tags/</loc><lastmod>2020-08-29T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://ckavidas.github.io/tags/ctf/</loc><lastmod>2020-08-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://ckavidas.github.io/posts/</loc><lastmod>2020-08-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://ckavidas.github.io/tags/</loc><lastmod>2020-08-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://ckavidas.github.io/tags/threat-hunt/</loc><lastmod>2020-08-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://ckavidas.github.io/categories/workshops/</loc><lastmod>2020-08-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://ckavidas.github.io/tags/guide/</loc><lastmod>2020-05-13T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://ckavidas.github.io/categories/guides/</loc><lastmod>2020-05-13T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://ckavidas.github.io/tags/lxc/</loc><lastmod>2020-05-13T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://ckavidas.github.io/tags/dc416/</loc><lastmod>2020-04-25T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://ckavidas.github.io/tags/threat-defense/</loc><lastmod>2020-04-25T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -24,7 +27,6 @@
             <loc>https://ckavidas.github.io/tags/workshops/</loc><lastmod>2020-04-25T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://ckavidas.github.io/about/</loc><lastmod>2020-04-21T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://ckavidas.github.io/tags/2020/</loc><lastmod>2020-03-27T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://ckavidas.github.io/tags/homelab/</loc><lastmod>2020-03-27T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://ckavidas.github.io/tags/issessions/</loc><lastmod>2020-03-27T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://ckavidas.github.io/tags/presentations/</loc><lastmod>2020-03-27T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://ckavidas.github.io/categories/presentations/</loc><lastmod>2020-03-27T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
