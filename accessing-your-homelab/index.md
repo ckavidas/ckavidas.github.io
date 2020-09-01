@@ -24,7 +24,7 @@ One of the questions I get often in regards to setting up a homelab is how to ac
 ___
 ## Option 1: Port Forwarding and Dynamic DNS
 
-In this configuration you are going to expose a port on your firewall/modem/router depending on what devices you have in your lab then use source NAT to forward packets from that port to a specific IP/Port. To reduce the complexity of having to remember your public IP address you utilize a dynamic DNS service such as duckdns to point <your_domain_name>.duckdns.org to your public IP address. This DNS service is dynamic and requires that you periodically update what your public IP address is because it is subject to change as a typical home user. 
+In this configuration you are going to expose a port on your firewall/modem/router depending on what devices you have in your lab then use destination NAT to forward packets from that port to a specific IP/Port. To reduce the complexity of having to remember your public IP address you utilize a dynamic DNS service such as duckdns to point `<your_domain_name>.duckdns.org` to your public IP address. This DNS service is dynamic and requires that you periodically update what your public IP address is because it is subject to change as a typical home user. 
 
 ![Example-01: Port Forwarding and Dynamic DNS](/images/accessing-your-homelab/example-01.png "In this example port 8020 on the modem/router combo is being forwarded to port 12322 on the Jellyfin VM.")
 
